@@ -95,34 +95,54 @@ pre.highlight code,
   }
 }
 
-/* Ensure the content wrapper doesn't exceed the viewport */
-.content-wrapper__inner {
-  display: flex;
-  justify-content: flex-start;  /* Align content to the left */
-  align-items: center;          /* Center content vertically */
-  height: 100vh;                /* Take up full viewport height */
-  width: calc(100vw - 550px);   /* Subtract sidebar width (460px) from the total width */
-  flex-direction: column;       /* Align content vertically */
-  padding: 0;
+
+.content-wrapper {
+  width: 100vw;
   margin: 0;
-  box-sizing: border-box;       /* Include padding and border in the element's total width/height */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-iframe {
-  border: none;
-  height: 100%;                 
-  width: 100%;                   
-  max-width: 100%;              
-  max-height: 100vh;             
+.content-wrapper__inner {
+  display: flex;
+  justify-content: center;       /* Center content horizontally */
+  align-items: center;           /* Optional: vertically center */
+  width: 100vw;                  /* Full width of viewport */
+  height: 100vh;                 /* Full height */
+  flex-direction: column;
+  padding: 0;
   margin: 0;
-  padding-top: 5%;
-  padding-bottom: 1%;
   box-sizing: border-box;
-}        
+}
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding-top: 5%;
+      padding-bottom: 1%;
+    }
+
 
 p{
   padding-left: 0;
 }
+
+body.no-header .header,
+body.no-header #sidebar {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+body.no-header * {
+  transition: none !important;
+  animation: none !important;
+}
+
 
 @media (max-width: 768px) {
   .content-wrapper__inner {
