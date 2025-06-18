@@ -1,0 +1,178 @@
+---
+---
+@import "uno";
+@import "tables";
+@import "monokai";
+@import "timeline";
+
+/* Modifications */
+
+pre.highlight,
+.highlight pre {
+  padding: 10px;
+}
+
+pre.highlight code,
+.highlight pre code {
+  white-space: pre-wrap;
+}
+
+.btn,
+.navigation__item a {
+  margin: 5px 0;
+  white-space: nowrap;
+}
+
+.pagination__page-number {
+  display: inline-block;
+  padding: 10px;
+}
+
+.categories a,
+.tags a {
+  border: 1px solid #e25440;
+  border-radius: 20px;
+  color: #e25440;
+  display: inline-block;
+  font-size: 12px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+.post-meta__tags {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.footer__copyright {
+    margin: 0 20px 10px;
+}
+
+.user-image {
+  margin-bottom: 1.2em;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #fff;
+  border-radius:100%;
+}
+
+.navigation__item {
+  @media (max-width: 768px) {
+  .navigation__item {
+    display: block; /* Stack the navigation items vertically on mobile */
+    margin: 10px 0; /* Add some margin between items */
+  }
+
+  .navigation__item a {
+    text-align: center; /* Center-align text inside the links */
+    padding: 10px 0; /* Add some padding to the links for better tap targets */
+    font-size: 16px; /* Optionally adjust font size for smaller screens */
+  }
+}
+
+/* Media query for screens with max-width of 430px */
+@media (max-width: 430px) {
+  .navigation__item {
+    display: block;   /* Stack items vertically */
+    margin: 18px 0;   /* Add more space between items */
+    width: 90%;  
+  }
+
+  .navigation__item a {
+    padding: 16px 0;  /* Increase padding for larger clickable area */
+    font-size: 14px;  /* Decrease font size for small screens */
+    width: 90%;  
+  }
+}
+}
+
+.content-wrapper {
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+/* Ensure the content wrapper doesn't exceed the viewport */
+.content-wrapper__inner {
+  display: flex;
+  justify-content: flex-start;  /* Align content to the left */
+  align-items: center;          /* Center content vertically */
+  height: 100vh;                /* Take up full viewport height */
+  width: calc(100vw - 550px);   /* Subtract sidebar width (460px) from the total width */
+  flex-direction: column;       /* Align content vertically */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;       /* Include padding and border in the element's total width/height */
+}
+
+iframe {
+  border: none;
+  height: 100%;                 
+  width: 100%;                   
+  max-width: 100%;              
+  max-height: 100vh;             
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  box-sizing: border-box;
+}        
+
+p{
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper__inner {
+    width: 100vw;                
+  }
+  
+  iframe {
+    height: 100vh;              
+    width: 100vw;               
+}
+
+  // Media query for mobile devices
+  @media (max-width: 768px) {
+
+    iframe {
+      width: 90vw;         /* Adjust width for smaller screens */
+      height: 60vh;        /* Adjust height for better fit */
+      padding: 20px 0;     /* Reduce padding */
+    }
+
+    .media {
+      width: 90%;          
+      margin-top: 15px;   
+    }
+
+    p{
+      align-items: center;
+      margin-left: 30%;
+    }
+  }
+}
+
+  @media (max-width: 430px) {
+
+    iframe {
+      width: 100%;         /* Full width for very small screens */
+      height: 50vh;        /* Reduce height */
+      padding: 10px 0;     /* Further reduce padding */
+    }
+
+    .media {
+      width: 90%;          
+      margin-top: 15px;    
+    }
+
+    p {
+      align-items: center;
+      margin-left: 30%;
+    }
+  }
+
+
+
