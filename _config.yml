@@ -1,0 +1,26 @@
+title: Mark Scheidies Library
+baseurl: ''  
+url: 'https://markscheidieslibrary.com'  
+
+markdown: kramdown
+highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: pages
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
