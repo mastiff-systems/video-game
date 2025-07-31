@@ -1,8 +1,8 @@
 title: History of Video Game Consoles
-baseurl: "/video-game"
-url: "https://mastiff-systems.github.io"
+baseurl: ""
+url: "http://interactivegamemuseum.com/"
 
-profilepic: /images/mark.jpg
+profilepic: 
 bkimage: /images/bk.jpg
 
 markdown: kramdown
